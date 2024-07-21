@@ -1,0 +1,30 @@
+.btn_1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005950;
+    color: white;
+    opacity: 0.9;
+    transition: 0.3s;
+ 
+}
+
+.btn_1:hover{
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px;
+    height: 15%;
+    width: 101%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005950;
+    color: white;
+    opacity: 0.8;
+    transition: 0.3s;
+ 
+}

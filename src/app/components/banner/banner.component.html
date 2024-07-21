@@ -1,0 +1,22 @@
+
+<div class="banner-container" >
+    <img  *ngFor= "let banner of banners;let i=index"
+     id="banner1" 
+     [src]="banner.bannerSrc"
+     [ngClass]="{'banner-active': selectedBanner === i}"
+     class="fade"
+      width="100%" 
+      height="100%"/>
+
+      <div class="dot-container">
+            <span *ngFor= "let dot of banners;let i=index" 
+            class="dot"
+            [ngClass]="{'active': selectedBanner === i}"
+            (click)="selectBanner(i)">
+          
+          
+
+            </span>
+            
+      </div>
+</div>

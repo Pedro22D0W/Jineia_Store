@@ -1,0 +1,26 @@
+#carousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.arrow img {
+    
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+
+    
+}
+
+
+.arrow img:hover {
+    
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
