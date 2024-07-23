@@ -1,40 +1,19 @@
 <div id="carousel">
-   <a class="arrow">
+   <span (click)="moveLeft()" class="arrow">
     <img src="../../../assets/left-arrow.png" alt="">
-   </a>
+   </span>
 
-   <carousel-card 
-   [image]="'../../../assets/sapato_1.jpg'"
-   [name]="'Papete 1'" 
-   [description]="'a nova papete do seninha'"
-   [price]="'50,00R$'">
-    </carousel-card>
+<carousel-card *ngFor="let sapato of sapatos| slice:initialIndex:initialIndex + numberOfItens" 
+    [image]="sapato.sapatoSrc"
+    [name]="sapato.name"
+    [price]="sapato.price"
+    [description]="sapato.description">
+</carousel-card>
 
-    <carousel-card 
-    [image]="'../../../assets/sapato_2.jpg'"
-    [name]="'Papete 2'" 
-    [description]="'a nova papete do seninha'"
-    [price]="'50,00R$'">
-     </carousel-card>
-
-     <carousel-card 
-     [image]="'../../../assets/sapato_3.jpg'"
-     [name]="'Papete 3'" 
-     [description]="'a nova papete do seninha'"
-     [price]="'50,00R$'">
-      </carousel-card>
-
-      <carousel-card 
-      [image]="'../../../assets/sapato_4.jpg'"
-      [name]="'Papete 4'" 
-      [description]="'a nova papete do seninha'"
-      [price]="'50,00R$'">
-       </carousel-card>
-
-  
+ 
    
 
-   <a class="arrow">
+   <span (click)="moveRight()" class="arrow"> 
     <img src="../../../assets/right_arrow.png" alt="">
-    </a>
+    </span>
 </div>

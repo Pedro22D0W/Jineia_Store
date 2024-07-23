@@ -13,7 +13,7 @@ export class CarouselCardComponent {
 @Input() image:string="";
 @Input() name:string="";
 @Input() description:string="";
-@Input() price:string="0";
+@Input() price:number=0;
 
 }
 

@@ -21,6 +21,8 @@ import { BannerComponent } from '../banner/banner.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  
   banners = [
     {
       bannerSrc: '../../../assets/banner_1.jpg',
@@ -33,6 +35,58 @@ export class HomeComponent {
     {
       bannerSrc: '../../../assets/banner_3.png',
       bannerAlt: 'Image 3'
+    }
+  ];
+
+  sapatos = [
+    {
+      sapatoSrc: '../../../assets/sapato_1.jpg',
+      name: 'Sapato 1',
+      price: 100,
+      description: 'Descrição do sapato 1'
+    },
+    {
+      sapatoSrc: '../../../assets/sapato_2.jpg',
+      name: 'Sapato 2',
+      price: 200,
+      description: 'Descrição do sapato 2'
+    },
+    {
+      sapatoSrc: '../../../assets/sapato_3.jpg',
+      name: 'Sapato 3',
+      price: 300,
+      description: 'Descrição do sapato 3'
+    },
+    {
+      sapatoSrc: '../../../assets/sapato_4.jpg',
+      name: 'Sapato 4',
+      price: 400,
+      description: 'Descrição do sapato 4'
+    },
+
+    {
+      sapatoSrc: '../../../assets/sapato_4.jpg',
+      name: 'Sapato 4',
+      price: 400,
+      description: 'Descrição do sapato 4'
+    },
+    {
+      sapatoSrc: '../../../assets/sapato_4.jpg',
+      name: 'Sapato 4',
+      price: 400,
+      description: 'Descrição do sapato 4'
+    },
+    {
+      sapatoSrc: '../../../assets/sapato_4.jpg',
+      name: 'Sapato 4',
+      price: 400,
+      description: 'Descrição do sapato 4'
+    },
+    {
+      sapatoSrc: '../../../assets/sapato_4.jpg',
+      name: 'Sapato 4',
+      price: 400,
+      description: 'Descrição do sapato 4'
     }
   ];
 
