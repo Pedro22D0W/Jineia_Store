@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CarouselCardComponent } from '../carousel-card/carousel-card.component';
-import { NgFor,CommonModule } from '@angular/common';
+import { NgFor, CommonModule } from '@angular/common';
 
-interface sapato {
-  sapatoSrc: string;
+interface item {
+  imageSrc: string;
   name: string;
   price: number;
   description: string;
@@ -21,25 +21,32 @@ interface sapato {
   styleUrl: './carousel.component.scss'
 })
 export class CarouselComponent {
- 
-  @Input()sapatos: sapato[] = [];
-  initialIndex:number = 0;
-  numberOfItens:number = 4;
 
-  moveLeft(){
+  @Input() items: item[] = [];
+  @Input() initialIndex: number = 0;
+  @Input() numberOfItens: number = 4;
 
-    if(this.initialIndex - this.numberOfItens >= 0){
+  @Output() newInitialIndex = new EventEmitter<number>();
+
+
+  moveLeft() {
+
+    if (this.initialIndex - this.numberOfItens >= 0) {
       this.initialIndex -= this.numberOfItens;
     }
-    console.log(this.initialIndex);
-  
-  }
-
-  moveRight(){
-    if(this.initialIndex== 0 || (this.initialIndex+this.numberOfItens) % this.sapatos.length != 0){
-      this.initialIndex +=this.numberOfItens;
+    else {
+      this.initialIndex = this.items.length - this.numberOfItens;
     }
-    console.log(this.initialIndex);
+    this.newInitialIndex.emit(this.initialIndex);
   }
 
+  moveRight() {
+    if (this.initialIndex == 0 || this.initialIndex + this.numberOfItens < this.items.length) {
+      this.initialIndex += this.numberOfItens;
+    }
+    else {
+      this.initialIndex = 0;
+    }
+    this.newInitialIndex.emit(this.initialIndex);
+  }
 }

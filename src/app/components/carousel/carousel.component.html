@@ -3,15 +3,7 @@
     <img src="../../../assets/left-arrow.png" alt="">
    </span>
 
-<carousel-card *ngFor="let sapato of sapatos| slice:initialIndex:initialIndex + numberOfItens" 
-    [image]="sapato.sapatoSrc"
-    [name]="sapato.name"
-    [price]="sapato.price"
-    [description]="sapato.description">
-</carousel-card>
-
- 
-   
+<ng-content ></ng-content>
 
    <span (click)="moveRight()" class="arrow"> 
     <img src="../../../assets/right_arrow.png" alt="">

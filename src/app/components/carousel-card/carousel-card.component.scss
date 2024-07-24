@@ -1,5 +1,5 @@
 .carousel-card{
-    width: 250px;
+    width: 240px;
     height: 400px;
     background-color: #ffffff;
     display: flex;
@@ -10,8 +10,7 @@
     
 }
 .carousel-card:hover{
-    width: 255px;
-    height: 405px;
+    scale: 1.05;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;

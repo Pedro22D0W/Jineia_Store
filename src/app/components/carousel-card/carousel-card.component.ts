@@ -10,7 +10,7 @@ import { Input } from '@angular/core';
 })
 export class CarouselCardComponent {
   
-@Input() image:string="";
+@Input() imageSrc:string="";
 @Input() name:string="";
 @Input() description:string="";
 @Input() price:number=0;
